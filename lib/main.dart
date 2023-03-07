@@ -16,7 +16,9 @@ class PerguntasApp extends StatelessWidget {
           title: Text('Perguntas'),
         ),
         body: Column(
-          children: [],
+          children: [
+            Text(perguntas[0]),
+          ],
         ),
       ),
     );
