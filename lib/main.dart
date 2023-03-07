@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(PerguntasApp());
 
-class PerguntasApp extends StatelessWidget {
+class PerguntasApp extends StatefulWidget {
+  @override
+  _PerguntasAppState createState() => _PerguntasAppState();
+}
+
+class _PerguntasAppState extends State<PerguntasApp> {
   final perguntas = [
     'Qual é a sua cor favorita?',
     'Qual é o seu animal favorito?'
