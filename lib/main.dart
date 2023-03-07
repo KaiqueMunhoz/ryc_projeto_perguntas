@@ -10,6 +10,9 @@ class PerguntasApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Perguntas'),
         ),
+        body: Column(
+          children: [],
+        ),
       ),
     );
   }
