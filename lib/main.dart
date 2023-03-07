@@ -20,19 +20,21 @@ class PerguntasApp extends StatelessWidget {
             Text(perguntas[0]),
             RaisedButton(
               child: Text('Resposta 1'),
-              onPressed: null,
+              onPressed: responder,
             ),
             RaisedButton(
               child: Text('Resposta 2'),
-              onPressed: null,
+              onPressed: responder,
             ),
             RaisedButton(
               child: Text('Resposta 3'),
-              onPressed: null,
+              onPressed: responder,
             ),
           ],
         ),
       ),
     );
   }
+
+  void responder() {}
 }
