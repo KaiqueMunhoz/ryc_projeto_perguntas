@@ -60,7 +60,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
     );
   }
 
-  void responder() {
+  void responder(int pontuacao) {
     setState(() {
       _perguntaSelecionada++;
     });
