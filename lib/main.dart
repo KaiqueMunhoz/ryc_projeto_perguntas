@@ -40,14 +40,21 @@ class _PerguntasAppState extends State<PerguntasApp> {
         appBar: AppBar(
           title: Text('Perguntas'),
         ),
-        body: Column(
-          children: [
-            Questao(_perguntas[_perguntaSelecionada]['texto'].toString()),
-            ...respostas
-                .map((resposta) => Resposta(resposta, responder))
-                .toList()
-          ],
-        ),
+        body: temPerguntaSelecionada
+            ? Column(
+                children: [
+                  Questao(_perguntas[_perguntaSelecionada]['texto'].toString()),
+                  ...respostas
+                      .map((resposta) => Resposta(resposta, responder))
+                      .toList()
+                ],
+              )
+            : Center(
+                child: Text(
+                  'Parabéns',
+                  style: TextStyle(fontSize: 28.0),
+                ),
+              ),
       ),
     );
   }
