@@ -31,6 +31,10 @@ class _PerguntasAppState extends State<PerguntasApp> {
   Widget build(BuildContext context) {
     List<Widget> respostas = [];
 
+    for (String resposta in perguntas[_perguntaSelecionada]['respostas']) {
+      respostas.add(Resposta(resposta, responder));
+    }
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
