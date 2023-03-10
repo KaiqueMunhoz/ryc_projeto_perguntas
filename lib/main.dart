@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ryc_projeto_perguntas/questao.dart';
-import 'package:ryc_projeto_perguntas/resposta.dart';
+import 'package:ryc_projeto_perguntas/questionario.dart';
 import 'package:ryc_projeto_perguntas/resultado.dart';
 
 void main() => runApp(PerguntasApp());
@@ -28,40 +27,30 @@ class _PerguntasAppState extends State<PerguntasApp> {
     },
   ];
 
-  bool get temPerguntaSelecionada {
-    return _perguntaSelecionada < _perguntas.length;
-  }
-
   @override
   Widget build(BuildContext context) {
-    final List<String> respostas = temPerguntaSelecionada
-        ? _perguntas[_perguntaSelecionada]['respostas']
-        : [];
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('Perguntas'),
         ),
         body: temPerguntaSelecionada
-            ? Column(
-                children: [
-                  Questao(_perguntas[_perguntaSelecionada]['texto'].toString()),
-                  ...respostas
-                      .map((resposta) => Resposta(resposta, responder))
-                      .toList()
-                ],
-              )
+            ? Questionario(
+                perguntas: _perguntas,
+                perguntaSelecionada: _perguntaSelecionada,
+                responder: responder)
             : Resultado(),
       ),
     );
   }
 
   void responder() {
-    if (temPerguntaSelecionada) {
-      setState(() {
-        _perguntaSelecionada++;
-      });
-    }
+    setState(() {
+      _perguntaSelecionada++;
+    });
+  }
+
+  bool get temPerguntaSelecionada {
+    return _perguntaSelecionada < _perguntas.length;
   }
 }
