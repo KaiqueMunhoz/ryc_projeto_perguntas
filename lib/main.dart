@@ -35,5 +35,9 @@ class _PerguntasAppState extends State<PerguntasApp> {
     );
   }
 
-  void responder() {}
+  void responder() {
+    setState(() {
+      _perguntaSelecionada++;
+    });
+  }
 }
