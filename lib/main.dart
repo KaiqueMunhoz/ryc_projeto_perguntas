@@ -10,7 +10,7 @@ class PerguntasApp extends StatefulWidget {
 }
 
 class _PerguntasAppState extends State<PerguntasApp> {
-  final List<Map<String, dynamic>> perguntas = [
+  final List<Map<String, Object>> perguntas = [
     {
       'texto': 'Qual é a sua cor favorita?',
       'respostas': ['Preto', 'Vermelho', 'Verde', 'Branco'],
@@ -28,6 +28,10 @@ class _PerguntasAppState extends State<PerguntasApp> {
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, Object> _pergunta = perguntas[_perguntaSelecionada];
+    final String _texto = _pergunta['texto'];
+    final List<String> _respostas = _pergunta['respostas'];
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -35,10 +39,12 @@ class _PerguntasAppState extends State<PerguntasApp> {
         ),
         body: Column(
           children: [
-            Questao(''),
-            Resposta('Resposta 1', responder),
-            Resposta('Resposta 2', responder),
-            Resposta('Resposta 3', responder),
+            Questao(_texto),
+            Column(
+              children: _respostas
+                  .map((_resposta) => Resposta(_resposta, responder))
+                  .toList(),
+            )
           ],
         ),
       ),
