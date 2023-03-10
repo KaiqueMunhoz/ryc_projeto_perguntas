@@ -14,6 +14,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
     'Qual é a sua cor favorita?',
     'Qual é o seu animal favorito?'
   ];
+  int _perguntaSelecionada = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
         ),
         body: Column(
           children: [
-            Questao(perguntas[0]),
+            Questao(perguntas[_perguntaSelecionada]),
             Resposta('Resposta 1', responder),
             Resposta('Resposta 2', responder),
             Resposta('Resposta 3', responder),
