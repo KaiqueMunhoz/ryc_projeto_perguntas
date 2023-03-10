@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ryc_projeto_perguntas/questao.dart';
 import 'package:ryc_projeto_perguntas/resposta.dart';
+import 'package:ryc_projeto_perguntas/resultado.dart';
 
 void main() => runApp(PerguntasApp());
 
@@ -49,12 +50,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
                       .toList()
                 ],
               )
-            : Center(
-                child: Text(
-                  'Parabéns',
-                  style: TextStyle(fontSize: 28.0),
-                ),
-              ),
+            : Resultado('Parabéns'),
       ),
     );
   }
