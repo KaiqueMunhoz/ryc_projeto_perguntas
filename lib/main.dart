@@ -53,8 +53,10 @@ class _PerguntasAppState extends State<PerguntasApp> {
   }
 
   void responder() {
-    setState(() {
-      _perguntaSelecionada++;
-    });
+    if (temPerguntaSelecionada) {
+      setState(() {
+        _perguntaSelecionada++;
+      });
+    }
   }
 }
