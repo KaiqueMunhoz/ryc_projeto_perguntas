@@ -52,7 +52,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
                       .toList()
                 ],
               )
-            : Resultado('Parabéns'),
+            : Resultado(),
       ),
     );
   }
