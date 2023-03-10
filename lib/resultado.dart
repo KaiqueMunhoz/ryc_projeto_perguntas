@@ -22,11 +22,16 @@ class Resultado extends StatelessWidget {
   }
 
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        fraseResultado,
-        style: TextStyle(fontSize: 28.0),
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: Text(
+            fraseResultado,
+            style: TextStyle(fontSize: 28.0),
+          ),
+        ),
+      ],
     );
   }
 }
