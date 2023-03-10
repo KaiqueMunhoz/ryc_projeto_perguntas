@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class Resposta extends StatelessWidget {
   final String texto;
+  final void Function() quandoSelecionado;
 
-  const Resposta(this.texto);
+  const Resposta(this.texto, this.quandoSelecionado);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class Resposta extends StatelessWidget {
         textColor: Colors.white,
         color: Colors.blue,
         child: Text(texto),
-        onPressed: null,
+        onPressed: quandoSelecionado,
       ),
     );
   }
