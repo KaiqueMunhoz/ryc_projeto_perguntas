@@ -29,12 +29,14 @@ class _PerguntasAppState extends State<PerguntasApp> {
   ];
 
   bool get temPerguntaSelecionada {
-    return _perguntaSelecionada < _perguntas.length - 1;
+    return _perguntaSelecionada < _perguntas.length;
   }
 
   @override
   Widget build(BuildContext context) {
-    List<String> respostas = _perguntas[_perguntaSelecionada]['respostas'];
+    List<String> respostas = temPerguntaSelecionada
+        ? _perguntas[_perguntaSelecionada]['respostas']
+        : [];
 
     return MaterialApp(
       home: Scaffold(
