@@ -54,7 +54,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
             ? Questionario(
                 perguntas: _perguntas,
                 perguntaSelecionada: _perguntaSelecionada,
-                quandoResponder: responder,
+                quantoResponder: responder,
               )
             : Resultado(),
       ),

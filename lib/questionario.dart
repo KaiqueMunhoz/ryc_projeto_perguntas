@@ -5,12 +5,12 @@ import 'package:ryc_projeto_perguntas/resposta.dart';
 class Questionario extends StatelessWidget {
   final List<Map<String, Object>> perguntas;
   final int perguntaSelecionada;
-  final void Function(int) quandoResponder;
+  final void Function(int) quantoResponder;
 
   const Questionario({
     @required this.perguntas,
     @required this.perguntaSelecionada,
-    @required this.quandoResponder,
+    @required this.quantoResponder,
   });
 
   @override
@@ -24,7 +24,7 @@ class Questionario extends StatelessWidget {
         Questao(perguntas[perguntaSelecionada]['texto'].toString()),
         ...respostas
             .map((resposta) => Resposta(resposta['texto'].toString(),
-                () => quandoResponder(resposta['pontuacao'])))
+                () => quantoResponder(resposta['pontuacao'])))
             .toList()
       ],
     );
