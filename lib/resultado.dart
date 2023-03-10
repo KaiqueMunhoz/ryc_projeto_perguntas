@@ -31,6 +31,14 @@ class Resultado extends StatelessWidget {
             style: TextStyle(fontSize: 28.0),
           ),
         ),
+        FlatButton(
+          child: Text(
+            'Reiniciar?',
+            style: TextStyle(fontSize: 18.0),
+          ),
+          textColor: Colors.blue,
+          onPressed: quandoReiniciarQuestionario,
+        )
       ],
     );
   }
