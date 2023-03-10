@@ -7,9 +7,14 @@ class Resposta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      child: Text(texto),
-      onPressed: null,
+    return Container(
+      width: double.infinity,
+      child: RaisedButton(
+        textColor: Colors.white,
+        color: Colors.blue,
+        child: Text(texto),
+        onPressed: null,
+      ),
     );
   }
 }
