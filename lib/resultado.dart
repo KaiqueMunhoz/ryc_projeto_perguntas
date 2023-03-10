@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 
 class Resultado extends StatelessWidget {
   final int pontuacao;
+  final void Function() quandoReiniciarQuestionario;
 
-  const Resultado(this.pontuacao);
+  const Resultado(
+    this.pontuacao,
+    this.quandoReiniciarQuestionario,
+  );
 
   String get fraseResultado {
     if (pontuacao < 8) {
