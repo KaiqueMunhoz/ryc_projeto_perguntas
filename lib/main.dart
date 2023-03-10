@@ -29,6 +29,8 @@ class _PerguntasAppState extends State<PerguntasApp> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> respostas = [];
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -37,9 +39,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
         body: Column(
           children: [
             Questao(perguntas[_perguntaSelecionada]['texto'].toString()),
-            Resposta('Resposta 1', responder),
-            Resposta('Resposta 2', responder),
-            Resposta('Resposta 3', responder),
+            ...respostas
           ],
         ),
       ),
