@@ -11,6 +11,7 @@ class PerguntasApp extends StatefulWidget {
 
 class _PerguntasAppState extends State<PerguntasApp> {
   int _perguntaSelecionada = 0;
+  int _pontuacaoTotal = 0;
 
   final List<Map<String, Object>> _perguntas = [
     {
@@ -63,6 +64,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
   void responder(int pontuacao) {
     setState(() {
       _perguntaSelecionada++;
+      _pontuacaoTotal += pontuacao;
     });
   }
 
