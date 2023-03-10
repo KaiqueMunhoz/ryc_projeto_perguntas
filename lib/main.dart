@@ -27,6 +27,10 @@ class _PerguntasAppState extends State<PerguntasApp> {
     },
   ];
 
+  bool get temPerguntaSelecionada {
+    return _perguntaSelecionada < _perguntas.length - 1;
+  }
+
   @override
   Widget build(BuildContext context) {
     List<String> respostas = _perguntas[_perguntaSelecionada]['respostas'];
