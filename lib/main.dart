@@ -35,7 +35,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
         ),
         body: Column(
           children: [
-            Questao(''),
+            Questao(perguntas[_perguntaSelecionada]['texto'].toString()),
             Resposta('Resposta 1', responder),
             Resposta('Resposta 2', responder),
             Resposta('Resposta 3', responder),
