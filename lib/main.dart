@@ -10,6 +10,8 @@ class PerguntasApp extends StatefulWidget {
 }
 
 class _PerguntasAppState extends State<PerguntasApp> {
+  int _perguntaSelecionada = 0;
+
   final List<Map<String, dynamic>> perguntas = [
     {
       'texto': 'Qual é a sua cor favorita?',
@@ -24,7 +26,6 @@ class _PerguntasAppState extends State<PerguntasApp> {
       'respostas': ['Maria', 'João', 'Leo', 'Pedro'],
     },
   ];
-  int _perguntaSelecionada = 0;
 
   @override
   Widget build(BuildContext context) {
